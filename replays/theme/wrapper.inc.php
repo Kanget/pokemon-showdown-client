@@ -91,13 +91,13 @@ function ThemeFooterTemplate() {
 	<script>
 		soundManager.setup({url: '//play.pokemonshowdown.com/swf/'});
 	</script>
-	<script src="//play.pokemonshowdown.com/config/config.js?5f6c7560"></script>
+	<script src="//play.pokemonshowdown.com/config/config.js?751b2b23"></script>
 	<script src="//play.pokemonshowdown.com/js/battledata.js?d6b56b0f"></script>
 	<script src="//play.pokemonshowdown.com/data/pokedex-mini.js?606f1208"></script>
 	<script src="//play.pokemonshowdown.com/data/pokedex-mini-bw.js?583e7911"></script>
 	<script src="//play.pokemonshowdown.com/data/graphics.js?1adc0939"></script>
 	<script src="//play.pokemonshowdown.com/data/pokedex.js?bc5dd4b6"></script>
-	<script src="//play.pokemonshowdown.com/data/items.js?11fda1a3"></script>
+	<script src="//play.pokemonshowdown.com/data/items.js?559c5672"></script>
 	<script src="//play.pokemonshowdown.com/data/moves.js?54ad9374"></script>
 	<script src="//play.pokemonshowdown.com/data/abilities.js?020dcd10"></script>
 	<script src="//play.pokemonshowdown.com/data/teambuilder-tables.js?776124a8"></script>
