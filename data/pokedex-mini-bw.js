@@ -455,6 +455,7 @@ exports.BattlePokemonSpritesBW = {
 	trapinch:{num:328},
 	vibrava:{num:329},
 	flygon:{num:330},
+	flygonmega:{num:330},
 	cacnea:{num:331},
 	cacturne:{num:332},
 	swablu:{num:333},

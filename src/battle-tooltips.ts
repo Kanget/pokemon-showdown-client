@@ -1062,6 +1062,9 @@ class BattleTooltips {
 			if (ability === 'sandrush' && weather === 'sandstorm') {
 				stats.spe *= 2;
 			}
+			if (ability === 'sandhunter' && weather === 'sandstorm') {
+				stats.spe *= 1.5;
+			}
 			if (ability === 'slushrush' && weather === 'hail') {
 				stats.spe *= 2;
 			}

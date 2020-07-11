@@ -1062,6 +1062,9 @@ stats.spd=Math.floor(stats.spd*1.5);
 if(ability==='sandrush'&&weather==='sandstorm'){
 stats.spe*=2;
 }
+if(ability==='sandhunter'&&weather==='sandstorm'){
+stats.spe*=1.5;
+}
 if(ability==='slushrush'&&weather==='hail'){
 stats.spe*=2;
 }
@@ -1142,6 +1145,9 @@ break;
 }
 if(item==='assaultvest'){
 stats.spd=Math.floor(stats.spd*1.5);
+}
+if(item==='battlearmor'){
+stats.def=Math.floor(stats.def*1.5);
 }
 if(item==='deepseascale'&&species==='Clamperl'){
 stats.spd*=2;
