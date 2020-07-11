@@ -1143,6 +1143,9 @@ class BattleTooltips {
 		if (item === 'assaultvest') {
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
+		if (item === 'battlearmor') {
+            stats.spd = Math.floor(stats.def * 1.5);
+        }
 		if (item === 'deepseascale' && species === 'Clamperl') {
 			stats.spd *= 2;
 		}
