@@ -1115,7 +1115,7 @@ stats.spd=Math.floor(stats.spd*1.5);
 }
 if(item==='eviofight'&&Dex.getSpecies(pokemon.speciesForme).evos){
 stats.atk=Math.floor(stats.atk*1.5);
-stats.def=Math.floor(stats.def*1.5);
+stats.spa=Math.floor(stats.def*1.5);
 }
 if(ability==='grasspelt'&&this.battle.hasPseudoWeather('Grassy Terrain')){
 stats.def=Math.floor(stats.def*1.5);
