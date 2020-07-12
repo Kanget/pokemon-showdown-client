@@ -1068,6 +1068,9 @@ class BattleTooltips {
 			if (ability === 'slushrush' && weather === 'hail') {
 				stats.spe *= 2;
 			}
+			if (this.battle.gen >= 4 && this.pokemonHasType(serverPokemon, 'Ice') && weather === 'hail') {
+				stats.spd = Math.floor(stats.def * 1.5);
+			}
 			if (item !== 'utilityumbrella') {
 				if (weather === 'sunnyday' || weather === 'desolateland') {
 					if (ability === 'solarpower') {
