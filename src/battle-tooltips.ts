@@ -1675,7 +1675,10 @@ class BattleTooltips {
 			}
 		}
 		if (move.flags['punch']) {
-			value.abilityModify(1.2, 'Iron Fist');
+			value.abilityModify(1.5, 'Iron Fist');
+		}
+		if (move.flags['kick']) {
+			value.abilityModify(1.5, 'Kicker');
 		}
 		if (move.recoil || move.hasCustomRecoil) {
 			value.abilityModify(1.2, 'Reckless');
