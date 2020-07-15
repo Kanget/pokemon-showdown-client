@@ -84,7 +84,7 @@ log:function(){}};
 
 var PSURL=
 (document.location.protocol!=='http:'?'https:':'')+
-'//play.pokemonshowdown.com/';var
+'//raw.githubusercontent.com/lhsackerson/pokemonshowdownimages/master/';var
 
 
 PSSubscription=function(){

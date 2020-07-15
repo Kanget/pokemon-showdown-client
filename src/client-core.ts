@@ -84,7 +84,7 @@ if (!window.console) {
 
 const PSURL = (
 	(document.location!.protocol !== 'http:' ? 'https:' : '') +
-	'//play.pokemonshowdown.com/'
+	'//raw.githubusercontent.com/lhsackerson/pokemonshowdownimages/master/'
 );
 
 class PSSubscription {
