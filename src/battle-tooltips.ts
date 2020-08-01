@@ -1367,9 +1367,9 @@ class BattleTooltips {
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
-		if (move.flags['gemeffect'] && value.pokemon.getStat.atk > value.pokemon.getStat.spa) {
+		if (move.id == 'hiddenpower' && ServerPokemon.stats.atk > ServerPokemon.stats.spa) {
 			category == 'Physical';
-		}
+			}
 		return [moveType, category];
 	}
 
