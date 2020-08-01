@@ -1367,6 +1367,9 @@ class BattleTooltips {
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
+		if (move.id == 'hiddenpower' && value.pokemon.getStat.atk > value.pokemon.getStat.spa) {
+			category == 'Physical';
+		}
 		return [moveType, category];
 	}
 
@@ -1811,6 +1814,7 @@ class BattleTooltips {
 		'Grass Pledge',
 		'Struggle',
 		'Water Pledge',
+		'Hidden Power',
 	];
 	getItemBoost(move: Move, value: ModifiableValue, moveType: TypeName) {
 		let item = this.battle.dex.getItem(value.serverPokemon.item);
