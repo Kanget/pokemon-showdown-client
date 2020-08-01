@@ -1361,14 +1361,19 @@ class BattleTooltips {
 				if (value.abilityModify(0, 'Galvanize')) moveType = 'Electric';
 				if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 				if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
+				if (value.abilityModify(0, 'Pyrate')) moveType = 'Fire';
+				if (value.abilityModify(0, 'Pollinate')) moveType = 'Grass';
+				if (value.abilityModify(0, 'Hydrate')) moveType = 'Water';
+				if (value.abilityModify(0, 'Hypnotize')) moveType = 'Psychic';
+				if (value.abilityModify(0, 'Terrorize')) moveType = 'Dark';
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
-		if (move.id == 'hiddenpower' && ServerPokemon.stats.atk > ServerPokemon.stats.spa) {
-			category == 'Physical';
+		if (move.id == 'hiddenpower' && pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+			category = 'Physical';
 			}
 		return [moveType, category];
 	}
@@ -1672,6 +1677,11 @@ class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Galvanize");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pixilate");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pyrate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pollinate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Hydrate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Hypnotize");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Terrorize");
 			}
 			if (this.battle.gen > 6) {
 				value.abilityModify(1.2, "Normalize");
