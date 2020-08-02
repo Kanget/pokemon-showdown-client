@@ -1372,7 +1372,7 @@ class BattleTooltips {
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
-		if (move.id == 'hiddenpowerwater' && pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+		if (move.id == 'hiddenpower' && value.pokemon.getStat('atk', false, true) > value.pokemon.getStat('spa', false, true)) {
 			category = 'Physical';
 			}
 		return [moveType, category];
