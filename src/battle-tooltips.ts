@@ -1,3 +1,13 @@
+/**
+ * Pokemon Showdown Tooltips
+ *
+ * A file for generating tooltips for battles. This should be IE7+ and
+ * use the DOM directly.
+ *
+ * @author Guangcong Luo <guangcongluo@gmail.com>
+ * @license MIT
+ */
+
 class ModifiableValue {
 	value = 0;
 	maxValue = 0;
@@ -2577,4 +2587,3 @@ if (typeof require === 'function') {
 	// in Node
 	(global as any).BattleStatGuesser = BattleStatGuesser;
 }
-
