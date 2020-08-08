@@ -272,11 +272,11 @@ case'zmove':
 case'maxmove':{
 var move=this.battle.dex.getMove(args[1]);
 var index=parseInt(args[2],10);
-var _pokemon=this.battle.mySide.active[index];
+var pokemon=this.battle.mySide.active[index];
 var serverPokemon=this.battle.myPokemon[index];
 var gmaxMove=args[3]?this.battle.dex.getMove(args[3]):undefined;
-if(!_pokemon)return false;
-buf=this.showMoveTooltip(move,type,_pokemon,serverPokemon,gmaxMove);
+if(!pokemon)return false;
+buf=this.showMoveTooltip(move,type,pokemon,serverPokemon,gmaxMove);
 break;
 }
 
@@ -285,10 +285,10 @@ case'pokemon':{
 
 var sideIndex=parseInt(args[1],10);
 var side=this.battle.sides[sideIndex];
-var _pokemon2=side.pokemon[parseInt(args[2],10)];
+var _pokemon=side.pokemon[parseInt(args[2],10)];
 if(args[3]==='illusion'){
 buf='';
-var species=_pokemon2.getBaseSpecies().baseSpecies;
+var species=_pokemon.getBaseSpecies().baseSpecies;
 var _index=1;for(var _i3=0,_side$pokemon=
 side.pokemon;_i3<_side$pokemon.length;_i3++){var otherPokemon=_side$pokemon[_i3];
 if(otherPokemon.getBaseSpecies().baseSpecies===species){
@@ -297,7 +297,7 @@ _index++;
 }
 }
 }else{
-buf=this.showPokemonTooltip(_pokemon2);
+buf=this.showPokemonTooltip(_pokemon);
 }
 break;
 }
@@ -307,13 +307,13 @@ case'activepokemon':{
 var _sideIndex=parseInt(args[1],10);
 var _side=this.battle.sides[_sideIndex];
 var activeIndex=parseInt(args[2],10);
-var _pokemon3=_side.active[activeIndex];
+var _pokemon2=_side.active[activeIndex];
 var _serverPokemon=null;
 if(_sideIndex===0&&this.battle.myPokemon){
 _serverPokemon=this.battle.myPokemon[activeIndex];
 }
-if(!_pokemon3)return false;
-buf=this.showPokemonTooltip(_pokemon3,_serverPokemon,true);
+if(!_pokemon2)return false;
+buf=this.showPokemonTooltip(_pokemon2,_serverPokemon,true);
 break;
 }
 case'switchpokemon':{
@@ -321,12 +321,12 @@ case'switchpokemon':{
 
 var _side2=this.battle.sides[0];
 var _activeIndex=parseInt(args[1],10);
-var _pokemon4=null;
+var _pokemon3=null;
 if(_activeIndex<_side2.active.length){
-_pokemon4=_side2.active[_activeIndex];
+_pokemon3=_side2.active[_activeIndex];
 }
 var _serverPokemon2=this.battle.myPokemon[_activeIndex];
-buf=this.showPokemonTooltip(_pokemon4,_serverPokemon2);
+buf=this.showPokemonTooltip(_pokemon3,_serverPokemon2);
 break;
 }
 case'field':{
@@ -1372,7 +1372,7 @@ if(value.abilityModify(0,'Normalize'))moveType='Normal';
 if(this.battle.gen<=3&&category!=='Status'){
 category=Dex.getGen3Category(moveType);
 }
-if(move.id=='hiddenpower'&&pokemon.getStat('atk',false,true)>pokemon.getStat('spa',false,true)){
+if(move.id=='hiddenpower'&&value.pokemon.getStat('atk',false,true)>value.pokemon.getStat('spa',false,true)){
 category='Physical';
 }
 return[moveType,category];
