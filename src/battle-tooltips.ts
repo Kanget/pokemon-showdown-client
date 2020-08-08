@@ -1286,6 +1286,8 @@ class BattleTooltips {
 	getMoveType(move: Move, value: ModifiableValue): [TypeName, 'Physical' | 'Special' | 'Status'] {
 		let moveType = move.type;
 		let category = move.category;
+		let stats = {...serverPokemon.stats};
+		let pokemon = clientPokemon || serverPokemon;
 		// can happen in obscure situations
 		if (!value.pokemon) return [moveType, category];
 
@@ -1372,7 +1374,7 @@ class BattleTooltips {
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
-		if (move.id == 'hiddenpowerwater' && value.pokemon.getStat('atk', false, true) > value.pokemon.getStat('spa', false, true)) {
+		if (move.id == 'hiddenpower' && stats.atk > stats.spa) {
 			category = 'Physical';
 			}
 		return [moveType, category];
@@ -1825,6 +1827,22 @@ class BattleTooltips {
 		'Struggle',
 		'Water Pledge',
 		'Hidden Power',
+		'Hidden Power Fire',
+		'Hidden Power Fighting',
+		'Hidden Power Water',
+		'Hidden Power Flying',
+		'Hidden Power Grass',
+		'Hidden Power Poison',
+		'Hidden Power Electric',
+		'Hidden Power Ground',
+		'Hidden Power Psychic',
+		'Hidden Power Rock',
+		'Hidden Power Ice',
+		'Hidden Power Bug',
+		'Hidden Power Dragon',
+		'Hidden Power Ghost',
+		'Hidden Power Dark',
+		'Hidden Power Steel',
 	];
 	getItemBoost(move: Move, value: ModifiableValue, moveType: TypeName) {
 		let item = this.battle.dex.getItem(value.serverPokemon.item);
