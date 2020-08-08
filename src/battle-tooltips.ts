@@ -1825,22 +1825,6 @@ class BattleTooltips {
 		'Struggle',
 		'Water Pledge',
 		'Hidden Power',
-		'Hidden Power Fire',
-		'Hidden Power Fighting',
-		'Hidden Power Water',
-		'Hidden Power Flying',
-		'Hidden Power Grass',
-		'Hidden Power Poison',
-		'Hidden Power Electric',
-		'Hidden Power Ground',
-		'Hidden Power Psychic',
-		'Hidden Power Rock',
-		'Hidden Power Ice',
-		'Hidden Power Bug',
-		'Hidden Power Dragon',
-		'Hidden Power Ghost',
-		'Hidden Power Dark',
-		'Hidden Power Steel',
 	];
 	getItemBoost(move: Move, value: ModifiableValue, moveType: TypeName) {
 		let item = this.battle.dex.getItem(value.serverPokemon.item);
