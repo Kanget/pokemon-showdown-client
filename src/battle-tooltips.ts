@@ -1286,8 +1286,6 @@ class BattleTooltips {
 	getMoveType(move: Move, value: ModifiableValue): [TypeName, 'Physical' | 'Special' | 'Status'] {
 		let moveType = move.type;
 		let category = move.category;
-		let stats = {...serverPokemon.stats};
-		let pokemon = clientPokemon || serverPokemon;
 		// can happen in obscure situations
 		if (!value.pokemon) return [moveType, category];
 
@@ -1374,7 +1372,7 @@ class BattleTooltips {
 		if (this.battle.gen <= 3 && category !== 'Status') {
 			category = Dex.getGen3Category(moveType);
 		}
-		if (move.id == 'hiddenpower' && stats.atk > stats.spa) {
+		if (move.id == 'hiddenpower' && value.pokemon.getStat('atk', false, true) > value.pokemon.getStat('spa', false, true)) {
 			category = 'Physical';
 			}
 		return [moveType, category];
