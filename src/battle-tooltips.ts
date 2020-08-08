@@ -1,3 +1,43 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Kanget 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+Kanget
+/
+pokemon-showdown-client
+0
+0
+0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+pokemon-showdown-client/src/battle-tooltips.ts /
+@Kanget
+Kanget v9.1.4
+Latest commit 16d8699 6 days ago
+ History
+ 13 contributors
+@Zarel@KrisXV@Kanget@asgdf@scheibo@patrickbahr@Parnassius@HoeenCoder@AnnikaCodes@Flametix@TheImmortal@MacChaeger
+2589 lines (2420 sloc)  88.2 KB
+  
+Code navigation is available!
+Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
+
 /**
  * Pokemon Showdown Tooltips
  *
@@ -2587,3 +2627,4 @@ if (typeof require === 'function') {
 	// in Node
 	(global as any).BattleStatGuesser = BattleStatGuesser;
 }
+
