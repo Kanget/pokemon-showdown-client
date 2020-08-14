@@ -776,7 +776,7 @@ num=BattlePokemonIconIndexesLeft[id];
 return num;
 };_proto2.
 
-getPokemonIcon=function getPokemonIcon(pokemon,facingLeft){var _pokemon,_pokemon2,_pokemon3,_pokemon3$volatiles,_pokemon4,_ref2;
+getPokemonIcon=function getPokemonIcon(pokemon,facingLeft){var _pokemon,_pokemon2,_pokemon3,_pokemon3$volatiles,_pokemon4,_pokemon5;
 if(pokemon==='pokeball'){
 return"background:transparent url("+Dex.resourcePrefix+"sprites/pokemonicons-pokeball-sheet.png) no-repeat scroll -0px 4px";
 }else if(pokemon==='pokeball-statused'){
@@ -802,7 +802,7 @@ var num=this.getPokemonIconNum(id,((_pokemon4=pokemon)==null?void 0:_pokemon4.ge
 
 var top=Math.floor(num/12)*30;
 var left=num%12*40;
-var fainted=((_ref2=pokemon)==null?void 0:_ref2.fainted)?";opacity:.3;filter:grayscale(100%) brightness(.5)":"";
+var fainted=((_pokemon5=pokemon)==null?void 0:_pokemon5.fainted)?";opacity:.3;filter:grayscale(100%) brightness(.5)":"";
 return"background:transparent url("+Dex.resourcePrefix+"sprites/pokemonicons-sheet.png?d1) no-repeat scroll -"+left+"px -"+top+"px"+fainted;
 };_proto2.
 
@@ -895,8 +895,8 @@ return"<img src=\""+Dex.resourcePrefix+"sprites/categories/"+sanitizedCategory+"
 getPokeballs=function getPokeballs(){
 if(this.pokeballs)return this.pokeballs;
 this.pokeballs=[];
-if(!window.BattleItems)window.BattleItems={};for(var _i3=0,_ref3=
-Object.values(window.BattleItems);_i3<_ref3.length;_i3++){var data=_ref3[_i3];
+if(!window.BattleItems)window.BattleItems={};for(var _i3=0,_ref2=
+Object.values(window.BattleItems);_i3<_ref2.length;_i3++){var data=_ref2[_i3];
 if(!data.isPokeball)continue;
 this.pokeballs.push(data.name);
 }
@@ -1064,8 +1064,8 @@ return data;
 getPokeballs=function getPokeballs(){
 if(this.pokeballs)return this.pokeballs;
 this.pokeballs=[];
-if(!window.BattleItems)window.BattleItems={};for(var _i4=0,_ref4=
-Object.values(window.BattleItems);_i4<_ref4.length;_i4++){var data=_ref4[_i4];
+if(!window.BattleItems)window.BattleItems={};for(var _i4=0,_ref3=
+Object.values(window.BattleItems);_i4<_ref3.length;_i4++){var data=_ref3[_i4];
 if(data.gen&&data.gen>this.gen)continue;
 if(!data.isPokeball)continue;
 this.pokeballs.push(data.name);
