@@ -1430,8 +1430,8 @@ class BattleTooltips {
 			value.abilityModify(0.8, "Hustle");
 		}
 		value.abilityModify(1.3, "Compound Eyes");
-		if (move.flags['contact']) {
-		value.abilityModify(1.2, "Ranger");
+		if (!move.flags['contact']) {
+		value.abilityModify(1.1, "Ranger");
 		}
 		for (const active of pokemon.side.active) {
 			if (!active || active.fainted) continue;

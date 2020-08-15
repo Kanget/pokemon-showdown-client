@@ -1430,8 +1430,8 @@ if(move.category==='Physical'){
 value.abilityModify(0.8,"Hustle");
 }
 value.abilityModify(1.3,"Compound Eyes");
-if(move.flags['contact']){
-value.abilityModify(1.2,"Ranger");
+if(!move.flags['contact']){
+value.abilityModify(1.1,"Ranger");
 }for(var _i19=0,_pokemon$side$active=
 pokemon.side.active;_i19<_pokemon$side$active.length;_i19++){var active=_pokemon$side$active[_i19];
 if(!active||active.fainted)continue;
