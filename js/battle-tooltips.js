@@ -1640,7 +1640,7 @@ value.abilityModify(1.5,"Mega Launcher");
 if(move.flags['bite']){
 value.abilityModify(1.5,"Strong Jaw");
 }
-if(move.flags['contact']){
+if(!move.flags['contact']){
 value.abilityModify(1.2,"Ranger");
 }
 if(value.value<=60){
